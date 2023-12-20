@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../js/login.js"></script>
+  </head>
+  <body>
+
+  <div class="content">
+    <div class="container">
+        <div class="nav">
+            <button class="btn btn1" id="btns1" onclick="showLogin()">Login</button>
+            <button class="btn btn2" id="btns2" onclick="showSignup()">Sign Up</button>
+        </div>
+
+        <div class="main">
+            
+            <div id="login" class="loginClass">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password"><br>
+                <div class="enquire">
+                    <a href="#"><input type="checkbox" id="remember">Remember me</a>
+                    <a href="#">Forgot password?</a>
+                </div><br>
+                <button class="subBtn" type="submit" onclick="login()">LOGIN</button><br>
+                <a href="#" onclick="showSignup()">Don't have an account? Sign Up</a>
+                <br>
+                <div class="home">
+                    <a href="/index.html">---></a>
+                </div>
+            </div>
+            <div id="signUp" class="signupClass">
+                <input type="email" id="email" placeholder="Email" required><br>
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <button type="submit" class="signBtn">CREATE ACCOUNT</button>
+                <br>
+                <a href="#" onclick="showLogin()">Login</a>
+                <br>
+                <div class="home">
+                    <a href="/index.html">---></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function login() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      // Other form values
+
+      // Perform validation here if needed
+      
+      // Example: Check if username and password are not empty
+      if (username.trim() === '' || password.trim() === '') {
+       
+        alert('Please fill in all fields.');
+        
+      }
+      else {
+          window.location.href="./admin.html"
+      }
+
+      // Perform login logic here
+      // Example: Send data to server or handle login in some way
+      console.log('Logging in...');
+    }
+
+    // function showSignup() {
+    //   // Show/hide signup/login forms as needed
+    //   document.getElementById('loginForm').style.display = 'none';
+    //   document.getElementById('signupForm').style.display = 'block';
+    // }
+   
+
+    // Other functions for signup form, etc.
+
+  </script>
+</body>
+</html>
+</html>
